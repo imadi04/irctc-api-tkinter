@@ -31,7 +31,7 @@ class Irctc:
         stations=""
         train_no=self.trainNo.get() #for fetching input of entry
         #requested url:https://api.railwayapi.com/v2/route/train/<train number>/apikey/<apikey>/
-        url="https://api.railwayapi.com/v2/route/train/{}/apikey/dcfvndu4y3/".format(train_no)
+        url="https://api.railwayapi.com/v2/route/train/{}/apikey/<apikey>/".format(train_no)
         data=requests.get(url)#thus get() is method of requests, not tinker #this function returns json file from given url
         response=data.json()#for making python understand the json file
         #print(response) #visit jsonviewer.stack.hu for viewing this response
